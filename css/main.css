@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Open+Sans|Shadows+Into+Light|Waiting+for+the+Sunrise");
 /**********************************
 ICON FONT
 ***********************************/
@@ -28,7 +29,7 @@ ICON FONT
   content: ""; }
 
 /**********************************
-BACKGROUND AND CONTENT
+BACKGROUND
 ***********************************/
 #wrapper {
   background: #a3c1ad;
@@ -38,17 +39,8 @@ BACKGROUND AND CONTENT
   top: 0;
   left: 0; }
 
-article {
-  background: #333;
-  color: white;
-  width: 70%;
-  /*   display: inline-block; */
-  margin: 0 auto;
-  position: relative;
-  /*   top: 100%; */
-  /*   transform: translateY(-50%); */
-  top: 5em;
-  padding: 2em; }
+.font-amatic {
+  font-family: 'Amatic SC', cursive; }
 
 /**********************************
 RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
@@ -311,7 +303,9 @@ RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
   p, ul, ol, pre, table, blockquote {
     margin-top: 40.45px;
     margin-bottom: 40.45px; } }
-/* ------ Demo styles ------ */
+/**********************************
+CONTENT STYLE
+***********************************/
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -321,22 +315,35 @@ html {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #212121;
   width: 90%;
-  margin: 0 auto 2em; }
+  margin: 0 auto; }
+
+#content {
+  background: #333;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 5em;
+  padding: 2em; }
+
+article {
+  text-align: center; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Amatic SC', sans-serif; }
+
+span.author {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40%;
+  display: block;
+  text-indent: 20%; }
+  span.author i {
+    font-weight: lighter; }
 
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
   transition: all 200ms ease-in-out; }
-
-code {
-  background: #ccc;
-  display: inline-block; }
-
-pre, code {
-  width: 100%; }
-
-pre {
-  margin: 1em; }
 
 /*# sourceMappingURL=main.css.map */

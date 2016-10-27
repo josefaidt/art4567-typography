@@ -1,4 +1,5 @@
 @import "variables";
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Open+Sans|Shadows+Into+Light|Waiting+for+the+Sunrise');
 
 
 /**********************************
@@ -43,7 +44,7 @@ ICON FONT
 
 
 /**********************************
-BACKGROUND AND CONTENT
+BACKGROUND
 ***********************************/
 @mixin bg($color) {
 	background: $color;
@@ -58,17 +59,20 @@ BACKGROUND AND CONTENT
 	@include bg($clr1);
 }
 
-article {
-  background: #333;
-  color: white;
-  width: 70%;
-/*   display: inline-block; */
-  margin: 0 auto;
-  position: relative;
-/*   top: 100%; */
-/*   transform: translateY(-50%); */
-	top: 5em;
-  padding: 2em;
+.font-amatic {
+	font-family: 'Amatic SC', cursive;
+}
+
+.font-shadows {
+	
+}
+
+.font-sunrise {
+	
+}
+
+.font-grace {
+	
 }
 
 
@@ -152,7 +156,9 @@ $ratio: 1.618;
 }
 
 
-/* ------ Demo styles ------ */
+/**********************************
+CONTENT STYLE
+***********************************/
 html{
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -162,21 +168,36 @@ html{
 	-moz-osx-font-smoothing: grayscale;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: rgb(33,33,33);
   width: 90%;
-  margin: 0 auto 2em;
+  margin: 0 auto;
+}
+#content {
+	background: #333;
+ 	color: white;
+ 	width: 70%;
+ 	margin: 0 auto;
+ 	position: relative;
+	top: 5em;
+ 	padding: 2em;
+}
+article {
+ 	text-align: center;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Amatic SC', sans-serif;
+}
+span.author {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 40%;
+		display: block;
+		text-indent: 20%;
+
+		i {
+			font-weight: lighter;
+		}
 }
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
   transition: all 200ms ease-in-out;
-}
-code{
-  background: #ccc;
-  display: inline-block;
-}
-pre, code{
-  width: 100%;
-}
-pre{
-  margin: 1em;
 }
