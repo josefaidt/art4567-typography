@@ -1,7 +1,50 @@
-$clrGreen: #abb88e;
-$clrOlive: #838b75;
-$clrBrown: #968f7e;
+@import "variables";
 
+
+/**********************************
+ICON FONT
+***********************************/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$icomoon-font-path}/icomoon.eot?7dg8iq');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?7dg8iq#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?7dg8iq') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?7dg8iq') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?7dg8iq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bug {
+  &:before {
+    content: $icon-bug;
+  }
+}
+.icon-paw {
+  &:before {
+    content: $icon-paw;
+  }
+}
+
+
+/**********************************
+BACKGROUND AND CONTENT
+***********************************/
 @mixin bg($color) {
 	background: $color;
 	position: absolute;
@@ -11,7 +54,129 @@ $clrBrown: #968f7e;
 	left: 0;
 }
 
-
 #wrapper {
-	@include bg($clrGreen);
+	@include bg($clr1);
+}
+
+article {
+  background: #333;
+  color: white;
+  width: 70%;
+/*   display: inline-block; */
+  margin: 0 auto;
+  position: relative;
+/*   top: 100%; */
+/*   transform: translateY(-50%); */
+	top: 5em;
+  padding: 2em;
+}
+
+
+/**********************************
+RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
+***********************************/
+
+/* ------ The Mixin ------ */
+@mixin typography($font-size){
+  $base-line-height: $font-size * $ratio;
+  $margin: $base-line-height;
+  body{
+    font-size: $font-size;
+    line-height: ($font-size * $ratio);
+  }
+  h1{
+    font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 3;
+    margin-top: $margin * 2;
+    margin-bottom: $margin;
+  }
+
+  h2{
+    font-size: (($font-size * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 2;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+  h3{
+    font-size: $font-size * $ratio;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+  h4{
+    font-size: $font-size;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+  p, ul, ol, pre, table, blockquote{
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+}
+
+/* ------ The Set Up ------ */
+//Step 1) Pick your ratio
+//example: 1.618 = Golden Ratio
+$ratio: 1.618;
+
+//Step 2) Pick your base font size per breakpoint using the mixin
+//example: @include typography(16px);
+
+//0 - first breakpoint
+@media (max-width: 299px){
+  @include typography(12px);
+}
+//start of mobile first breakpoints
+@media (min-width: 300px){
+  @include typography(14px);
+}
+@media(min-width: 600px){
+  @include typography(15px);
+}
+@media(min-width: 800px){
+  @include typography(16px);
+}
+@media(min-width: 1000px){
+  @include typography(19px);
+}
+@media(min-width: 1200px){
+  @include typography(21px);
+}
+@media(min-width: 1400px){
+  @include typography(23px);
+}
+@media(min-width: 1600px){
+  @include typography(25px);
+}
+
+
+/* ------ Demo styles ------ */
+html{
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased !important;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  color: rgb(33,33,33);
+  width: 90%;
+  margin: 0 auto 2em;
+}
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
+  transition: all 200ms ease-in-out;
+}
+code{
+  background: #ccc;
+  display: inline-block;
+}
+pre, code{
+  width: 100%;
+}
+pre{
+  margin: 1em;
 }

@@ -1,9 +1,342 @@
+@charset "UTF-8";
+/**********************************
+ICON FONT
+***********************************/
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?7dg8iq");
+  src: url("fonts/icomoon.eot?7dg8iq#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?7dg8iq") format("truetype"), url("fonts/icomoon.woff?7dg8iq") format("woff"), url("fonts/icomoon.svg?7dg8iq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-bug:before {
+  content: ""; }
+
+.icon-paw:before {
+  content: ""; }
+
+/**********************************
+BACKGROUND AND CONTENT
+***********************************/
 #wrapper {
-  background: #abb88e;
+  background: #a3c1ad;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0; }
+
+article {
+  background: #333;
+  color: white;
+  width: 70%;
+  /*   display: inline-block; */
+  margin: 0 auto;
+  position: relative;
+  /*   top: 100%; */
+  /*   transform: translateY(-50%); */
+  top: 5em;
+  padding: 2em; }
+
+/**********************************
+RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
+***********************************/
+/* ------ The Mixin ------ */
+/* ------ The Set Up ------ */
+@media (max-width: 299px) {
+  body {
+    font-size: 12px;
+    line-height: 19.416px; }
+
+  h1 {
+    font-size: 50.82961px;
+    line-height: 58.248px;
+    margin-top: 38.832px;
+    margin-bottom: 19.416px; }
+
+  h2 {
+    font-size: 31.41509px;
+    line-height: 38.832px;
+    margin-top: 19.416px;
+    margin-bottom: 19.416px; }
+
+  h3 {
+    font-size: 19.416px;
+    line-height: 19.416px;
+    margin-top: 19.416px;
+    margin-bottom: 19.416px; }
+
+  h4 {
+    font-size: 12px;
+    line-height: 19.416px;
+    margin-top: 19.416px;
+    margin-bottom: 19.416px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 19.416px;
+    margin-bottom: 19.416px; } }
+@media (min-width: 300px) {
+  body {
+    font-size: 14px;
+    line-height: 22.652px; }
+
+  h1 {
+    font-size: 59.30121px;
+    line-height: 67.956px;
+    margin-top: 45.304px;
+    margin-bottom: 22.652px; }
+
+  h2 {
+    font-size: 36.65094px;
+    line-height: 45.304px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  h3 {
+    font-size: 22.652px;
+    line-height: 22.652px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  h4 {
+    font-size: 14px;
+    line-height: 22.652px;
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 22.652px;
+    margin-bottom: 22.652px; } }
+@media (min-width: 600px) {
+  body {
+    font-size: 15px;
+    line-height: 24.27px; }
+
+  h1 {
+    font-size: 63.53702px;
+    line-height: 72.81px;
+    margin-top: 48.54px;
+    margin-bottom: 24.27px; }
+
+  h2 {
+    font-size: 39.26886px;
+    line-height: 48.54px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  h3 {
+    font-size: 24.27px;
+    line-height: 24.27px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  h4 {
+    font-size: 15px;
+    line-height: 24.27px;
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 24.27px;
+    margin-bottom: 24.27px; } }
+@media (min-width: 800px) {
+  body {
+    font-size: 16px;
+    line-height: 25.888px; }
+
+  h1 {
+    font-size: 67.77282px;
+    line-height: 77.664px;
+    margin-top: 51.776px;
+    margin-bottom: 25.888px; }
+
+  h2 {
+    font-size: 41.88678px;
+    line-height: 51.776px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  h3 {
+    font-size: 25.888px;
+    line-height: 25.888px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  h4 {
+    font-size: 16px;
+    line-height: 25.888px;
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 25.888px;
+    margin-bottom: 25.888px; } }
+@media (min-width: 1000px) {
+  body {
+    font-size: 19px;
+    line-height: 30.742px; }
+
+  h1 {
+    font-size: 80.48022px;
+    line-height: 92.226px;
+    margin-top: 61.484px;
+    margin-bottom: 30.742px; }
+
+  h2 {
+    font-size: 49.74056px;
+    line-height: 61.484px;
+    margin-top: 30.742px;
+    margin-bottom: 30.742px; }
+
+  h3 {
+    font-size: 30.742px;
+    line-height: 30.742px;
+    margin-top: 30.742px;
+    margin-bottom: 30.742px; }
+
+  h4 {
+    font-size: 19px;
+    line-height: 30.742px;
+    margin-top: 30.742px;
+    margin-bottom: 30.742px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 30.742px;
+    margin-bottom: 30.742px; } }
+@media (min-width: 1200px) {
+  body {
+    font-size: 21px;
+    line-height: 33.978px; }
+
+  h1 {
+    font-size: 88.95182px;
+    line-height: 101.934px;
+    margin-top: 67.956px;
+    margin-bottom: 33.978px; }
+
+  h2 {
+    font-size: 54.9764px;
+    line-height: 67.956px;
+    margin-top: 33.978px;
+    margin-bottom: 33.978px; }
+
+  h3 {
+    font-size: 33.978px;
+    line-height: 33.978px;
+    margin-top: 33.978px;
+    margin-bottom: 33.978px; }
+
+  h4 {
+    font-size: 21px;
+    line-height: 33.978px;
+    margin-top: 33.978px;
+    margin-bottom: 33.978px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 33.978px;
+    margin-bottom: 33.978px; } }
+@media (min-width: 1400px) {
+  body {
+    font-size: 23px;
+    line-height: 37.214px; }
+
+  h1 {
+    font-size: 97.42342px;
+    line-height: 111.642px;
+    margin-top: 74.428px;
+    margin-bottom: 37.214px; }
+
+  h2 {
+    font-size: 60.21225px;
+    line-height: 74.428px;
+    margin-top: 37.214px;
+    margin-bottom: 37.214px; }
+
+  h3 {
+    font-size: 37.214px;
+    line-height: 37.214px;
+    margin-top: 37.214px;
+    margin-bottom: 37.214px; }
+
+  h4 {
+    font-size: 23px;
+    line-height: 37.214px;
+    margin-top: 37.214px;
+    margin-bottom: 37.214px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 37.214px;
+    margin-bottom: 37.214px; } }
+@media (min-width: 1600px) {
+  body {
+    font-size: 25px;
+    line-height: 40.45px; }
+
+  h1 {
+    font-size: 105.89503px;
+    line-height: 121.35px;
+    margin-top: 80.9px;
+    margin-bottom: 40.45px; }
+
+  h2 {
+    font-size: 65.4481px;
+    line-height: 80.9px;
+    margin-top: 40.45px;
+    margin-bottom: 40.45px; }
+
+  h3 {
+    font-size: 40.45px;
+    line-height: 40.45px;
+    margin-top: 40.45px;
+    margin-bottom: 40.45px; }
+
+  h4 {
+    font-size: 25px;
+    line-height: 40.45px;
+    margin-top: 40.45px;
+    margin-bottom: 40.45px; }
+
+  p, ul, ol, pre, table, blockquote {
+    margin-top: 40.45px;
+    margin-bottom: 40.45px; } }
+/* ------ Demo styles ------ */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  width: 90%;
+  margin: 0 auto 2em; }
+
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
+  transition: all 200ms ease-in-out; }
+
+code {
+  background: #ccc;
+  display: inline-block; }
+
+pre, code {
+  width: 100%; }
+
+pre {
+  margin: 1em; }
 
 /*# sourceMappingURL=main.css.map */
