@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/**********************************
+SEAFOAM GREEN PALLET
+***********************************/
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Open+Sans|Shadows+Into+Light|Waiting+for+the+Sunrise");
 /**********************************
 ICON FONT
@@ -29,19 +32,8 @@ ICON FONT
   content: ""; }
 
 /**********************************
-BACKGROUND
+ANIMATION KEYFRAME MIXIN: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 ***********************************/
-#wrapper {
-  background: #a3c1ad;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
-
-.font-amatic {
-  font-family: 'Amatic SC', cursive; }
-
 /**********************************
 RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
 ***********************************/
@@ -304,6 +296,17 @@ RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
     margin-top: 40.45px;
     margin-bottom: 40.45px; } }
 /**********************************
+BACKGROUND
+***********************************/
+#wrapper {
+  background: #a3c1ad;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+/**********************************
 CONTENT STYLE
 ***********************************/
 html {
@@ -321,7 +324,14 @@ body {
   margin: 0 auto; }
 
 article {
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  article:hover {
+    color: #e6d2c6; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Amatic SC', sans-serif; }
@@ -333,7 +343,6 @@ p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
 ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
 ***********************************/
 .content {
-  animation-delay: 1s;
   color: #fff;
   text-align: center;
   background: #333;
@@ -347,6 +356,10 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
     display: inline-block;
     transform: translate(0, -20px);
     opacity: 0;
+    -webkit-animation: fade-in 1s forwards;
+    -moz-animation: fade-in 1s forwards;
+    -ms-animation: fade-in 1s forwards;
+    -o-animation: fade-in 1s forwards;
     animation: fade-in 1s forwards; }
     .content .text .author {
       font-family: 'Open Sans', sans-serif;
@@ -364,6 +377,22 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
   .content .t-6 {
     animation-delay: 1s; }
 
+@-webkit-keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@-moz-keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@-ms-keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@-o-keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
 @keyframes fade-in {
   100% {
     opacity: 1;

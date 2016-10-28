@@ -44,35 +44,40 @@ ICON FONT
 
 
 /**********************************
-BACKGROUND
+ANIMATION KEYFRAME MIXIN: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 ***********************************/
-@mixin bg($color) {
-	background: $color;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
 }
 
-#wrapper {
-	@include bg($clr1);
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
 }
 
-.font-amatic {
-	font-family: 'Amatic SC', cursive;
-}
-
-.font-shadows {
-	
-}
-
-.font-sunrise {
-	
-}
-
-.font-grace {
-	
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
 
@@ -157,6 +162,23 @@ $ratio: 1.618;
 
 
 /**********************************
+BACKGROUND
+***********************************/
+@mixin bg($color) {
+	background: $color;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#wrapper {
+	@include bg($clr1);
+}
+
+
+/**********************************
 CONTENT STYLE
 ***********************************/
 html{
@@ -184,6 +206,10 @@ body{
 // }
 article {
  	text-align: center;
+ 	@include transition(color .3s ease);
+  &:hover {
+    color: $clrTan;
+  }
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Amatic SC', sans-serif;
@@ -191,7 +217,6 @@ h1, h2, h3, h4, h5 {
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
   transition: all 200ms ease-in-out;
 }
-
 
 /**********************************
 ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
@@ -211,7 +236,7 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
     display: inline-block;
     transform: translate(0, -20px);
     opacity: 0;
-    animation: fade-in 1s forwards;
+    @include animation('fade-in 1s forwards');
 
     .author {
 		font-family: 'Open Sans', sans-serif;
@@ -238,6 +263,6 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
   }
 }
 
-@keyframes fade-in {
+@include keyframes(fade-in) {
   100% {opacity: 1; transform: translate(0, 0);}
 }
