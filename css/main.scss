@@ -173,31 +173,71 @@ body{
   width: 90%;
   margin: 0 auto;
 }
-#content {
-	background: #333;
- 	color: white;
- 	width: 70%;
- 	margin: 0 auto;
- 	position: relative;
-	top: 5em;
- 	padding: 2em;
-}
+// .content {
+// 	background: #333;
+//  	color: white;
+//  	width: 70%;
+//  	margin: 0 auto;
+//  	position: relative;
+// 	top: 5em;
+//  	padding: 2em;
+// }
 article {
  	text-align: center;
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Amatic SC', sans-serif;
 }
-span.author {
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
+  transition: all 200ms ease-in-out;
+}
+
+
+/**********************************
+ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
+***********************************/
+.content {
+  color: #fff;
+  text-align: center;
+  background: #333;
+ 	color: white;
+ 	width: 70%;
+ 	margin: 0 auto;
+ 	position: relative;
+	top: 5em;
+ 	padding: 2em;
+
+  .text {
+    display: inline-block;
+    transform: translate(0, -20px);
+    opacity: 0;
+    animation: fade-in 1s forwards;
+
+    .author {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 40%;
 		display: block;
-		text-indent: 20%;
-
-		i {
-			font-weight: lighter;
+		// text-indent: 20%;
+		font-weight: lighter;
 		}
+  }  
+  .t-2 {
+    animation-delay: .2s;
+  }
+  .t-3 {
+    animation-delay: .4s;
+  }
+  .t-4 {
+    animation-delay: .6s;
+  }
+  .t-5 {
+    animation-delay: .8s;
+  }
+  .t-6 {
+    animation-delay: 1s;
+  }
 }
-p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
-  transition: all 200ms ease-in-out;
+
+@keyframes fade-in {
+  100% {opacity: 1; transform: translate(0, 0);}
 }

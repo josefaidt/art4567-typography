@@ -320,7 +320,22 @@ body {
   width: 90%;
   margin: 0 auto; }
 
-#content {
+article {
+  text-align: center; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Amatic SC', sans-serif; }
+
+p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
+  transition: all 200ms ease-in-out; }
+
+/**********************************
+ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
+***********************************/
+.content {
+  animation-delay: 1s;
+  color: #fff;
+  text-align: center;
   background: #333;
   color: white;
   width: 70%;
@@ -328,22 +343,30 @@ body {
   position: relative;
   top: 5em;
   padding: 2em; }
+  .content .text {
+    display: inline-block;
+    transform: translate(0, -20px);
+    opacity: 0;
+    animation: fade-in 1s forwards; }
+    .content .text .author {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 40%;
+      display: block;
+      font-weight: lighter; }
+  .content .t-2 {
+    animation-delay: .2s; }
+  .content .t-3 {
+    animation-delay: .4s; }
+  .content .t-4 {
+    animation-delay: .6s; }
+  .content .t-5 {
+    animation-delay: .8s; }
+  .content .t-6 {
+    animation-delay: 1s; }
 
-article {
-  text-align: center; }
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Amatic SC', sans-serif; }
-
-span.author {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40%;
-  display: block;
-  text-indent: 20%; }
-  span.author i {
-    font-weight: lighter; }
-
-p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
-  transition: all 200ms ease-in-out; }
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
 
 /*# sourceMappingURL=main.css.map */
