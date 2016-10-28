@@ -31,17 +31,46 @@ ANIMATION KEYFRAME MIXIN: http://zerosixthree.se/8-sass-mixins-you-must-have-in-
   animation: #{$str};      
 }
 
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+
+/**********************************
+TRANSITIONS: https://codepen.io/sawmac/pen/cayhK
+***********************************/
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  -webkit-transition-property: $property;
+  transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  -webkit-transition-property: $duration;
+  transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
 }
 
 
 /**********************************
-RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
+RE
+SPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
 ***********************************/
 
 /* ------ The Mixin ------ */
@@ -178,7 +207,10 @@ BACKGROUND
 // 	@include bg($clr1);
 // }
 
-/* The only rule that matters */
+
+/**********************************
+VIDEO BACKGROUND: http://codepen.io/mattgrosswork/pen/jrdwK
+***********************************/
 #video-background {
 /*  making the video fullscreen  */
   position: fixed;
@@ -221,15 +253,31 @@ body{
 article {
  	text-align: center;
  	@include transition(color .3s ease);
-  &:hover {
-    color: $clrTan;
-  }
 }
 h1, h2, h3, h4, h5 {
 	font-family: 'Amatic SC', sans-serif;
+	letter-spacing: 0.2em;
 }
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6{
   transition: all 200ms ease-in-out;
+}
+footer {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 80%;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	top: 18em;
+	span {
+		padding: 0.5em 1em;
+		@include transition(all 1s ease);
+		&:hover {
+			background-color: $clr5-rgba;
+			color: $clrYellow;
+			border-radius: 10%;
+		}
+	}
 }
 
 /**********************************
@@ -238,20 +286,26 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
 .content {
   color: #fff;
   text-align: center;
-  background: #333;
+  background: $clrBrown2;
  	color: white;
  	width: 70%;
  	margin: 0 auto;
  	position: relative;
 	top: 7em;
  	padding: 2em;
+ 	border-radius: 2%;
+ 	@include transition(all 0.7s 0.3s);
+ 	&:hover {
+ 		background: fade-in($clrBrown2, 1);
+ 	}
+}
 
-  .text {
+.text {
     display: inline-block;
     transform: translate(0, -20px);
     opacity: 0;
     @include animation('fade-in 1s forwards');
- 
+
   }  
   .t-2 {
     animation-delay: 1s;
@@ -277,7 +331,6 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
   .t-9 {
   	animation-delay: 6.5s;
   }
-}
 
 .author {
 		font-family: 'Open Sans', sans-serif;
@@ -285,7 +338,16 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
 		display: block;
 		// text-indent: 20%;
 		font-weight: lighter;
+		letter-spacing: 0;
+		text-indent: 20%;
 }
+
+span.text {
+	@include transition(color 500ms 200ms);
+}
+span.text:hover {
+    color: $clr2;
+  }
 
 @include keyframes(fade-in) {
   100% {opacity: 1; transform: translate(0, 0);}

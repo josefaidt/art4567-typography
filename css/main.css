@@ -7,7 +7,11 @@ SEAFOAM GREEN PALLET
 ANIMATION KEYFRAME MIXIN: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 ***********************************/
 /**********************************
-RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
+TRANSITIONS: https://codepen.io/sawmac/pen/cayhK
+***********************************/
+/**********************************
+RE
+SPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
 ***********************************/
 /* ------ The Mixin ------ */
 /* ------ The Set Up ------ */
@@ -298,7 +302,9 @@ ICON FONT
 /**********************************
 BACKGROUND
 ***********************************/
-/* The only rule that matters */
+/**********************************
+VIDEO BACKGROUND: http://codepen.io/mattgrosswork/pen/jrdwK
+***********************************/
 #video-background {
   /*  making the video fullscreen  */
   position: fixed;
@@ -329,19 +335,36 @@ body {
 
 article {
   text-align: center;
-  -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease; }
-  article:hover {
-    color: #e6d2c6; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Amatic SC', sans-serif; }
+  font-family: 'Amatic SC', sans-serif;
+  letter-spacing: 0.2em; }
 
 p, ul, ol, pre, table, blockquote, h1, h2, h3, h4, h5, h6 {
   transition: all 200ms ease-in-out; }
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  top: 18em; }
+  footer span {
+    padding: 0.5em 1em;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
+    footer span:hover {
+      background-color: rgba(73, 121, 107, 0.3);
+      color: #fffdf7;
+      border-radius: 10%; }
 
 /**********************************
 ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
@@ -349,44 +372,71 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
 .content {
   color: #fff;
   text-align: center;
-  background: #333;
+  background: rgba(58, 39, 22, 0.6);
   color: white;
   width: 70%;
   margin: 0 auto;
   position: relative;
   top: 7em;
-  padding: 2em; }
-  .content .text {
-    display: inline-block;
-    transform: translate(0, -20px);
-    opacity: 0;
-    -webkit-animation: fade-in 1s forwards;
-    -moz-animation: fade-in 1s forwards;
-    -ms-animation: fade-in 1s forwards;
-    -o-animation: fade-in 1s forwards;
-    animation: fade-in 1s forwards; }
-  .content .t-2 {
-    animation-delay: 1s; }
-  .content .t-3 {
-    animation-delay: 1.3s; }
-  .content .t-4 {
-    animation-delay: 1.8s; }
-  .content .t-5 {
-    animation-delay: 2.3s; }
-  .content .t-6 {
-    animation-delay: 3.4s; }
-  .content .t-7 {
-    animation-delay: 3.7s; }
-  .content .t-8 {
-    animation-delay: 3.9s; }
-  .content .t-9 {
-    animation-delay: 6.5s; }
+  padding: 2em;
+  border-radius: 2%;
+  -moz-transition: all 0.7s 0.3s;
+  -o-transition: all 0.7s 0.3s;
+  -webkit-transition: all 0.7s 0.3s;
+  transition: all 0.7s 0.3s; }
+  .content:hover {
+    background: #3a2716; }
+
+.text {
+  display: inline-block;
+  transform: translate(0, -20px);
+  opacity: 0;
+  -webkit-animation: fade-in 1s forwards;
+  -moz-animation: fade-in 1s forwards;
+  -ms-animation: fade-in 1s forwards;
+  -o-animation: fade-in 1s forwards;
+  animation: fade-in 1s forwards; }
+
+.t-2 {
+  animation-delay: 1s; }
+
+.t-3 {
+  animation-delay: 1.3s; }
+
+.t-4 {
+  animation-delay: 1.8s; }
+
+.t-5 {
+  animation-delay: 2.3s; }
+
+.t-6 {
+  animation-delay: 3.4s; }
+
+.t-7 {
+  animation-delay: 3.7s; }
+
+.t-8 {
+  animation-delay: 3.9s; }
+
+.t-9 {
+  animation-delay: 6.5s; }
 
 .author {
   font-family: 'Open Sans', sans-serif;
   font-size: 40%;
   display: block;
-  font-weight: lighter; }
+  font-weight: lighter;
+  letter-spacing: 0;
+  text-indent: 20%; }
+
+span.text {
+  -moz-transition: color 500ms 200ms;
+  -o-transition: color 500ms 200ms;
+  -webkit-transition: color 500ms 200ms;
+  transition: color 500ms 200ms; }
+
+span.text:hover {
+  color: #a0d6b4; }
 
 @-webkit-keyframes fade-in {
   100% {
