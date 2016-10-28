@@ -4,34 +4,6 @@ SEAFOAM GREEN PALLET
 ***********************************/
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Open+Sans|Shadows+Into+Light|Waiting+for+the+Sunrise");
 /**********************************
-ICON FONT
-***********************************/
-@font-face {
-  font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?7dg8iq");
-  src: url("fonts/icomoon.eot?7dg8iq#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?7dg8iq") format("truetype"), url("fonts/icomoon.woff?7dg8iq") format("woff"), url("fonts/icomoon.svg?7dg8iq#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-bug:before {
-  content: ""; }
-
-.icon-paw:before {
-  content: ""; }
-
-/**********************************
 ANIMATION KEYFRAME MIXIN: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 ***********************************/
 /**********************************
@@ -296,15 +268,47 @@ RESPONSINVE RATIO: http://codepen.io/derekjp/pen/avodwL
     margin-top: 40.45px;
     margin-bottom: 40.45px; } }
 /**********************************
+ICON FONT
+***********************************/
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?7dg8iq");
+  src: url("fonts/icomoon.eot?7dg8iq#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?7dg8iq") format("truetype"), url("fonts/icomoon.woff?7dg8iq") format("woff"), url("fonts/icomoon.svg?7dg8iq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-bug:before {
+  content: ""; }
+
+.icon-paw:before {
+  content: ""; }
+
+/**********************************
 BACKGROUND
 ***********************************/
-#wrapper {
-  background: #a3c1ad;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
+/* The only rule that matters */
+#video-background {
+  /*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; }
 
 /**********************************
 CONTENT STYLE
@@ -350,7 +354,7 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
   width: 70%;
   margin: 0 auto;
   position: relative;
-  top: 5em;
+  top: 7em;
   padding: 2em; }
   .content .text {
     display: inline-block;
@@ -361,21 +365,28 @@ ANIMATION: http://codepen.io/kaypooma/pen/wBGyWN
     -ms-animation: fade-in 1s forwards;
     -o-animation: fade-in 1s forwards;
     animation: fade-in 1s forwards; }
-    .content .text .author {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 40%;
-      display: block;
-      font-weight: lighter; }
   .content .t-2 {
-    animation-delay: .2s; }
-  .content .t-3 {
-    animation-delay: .4s; }
-  .content .t-4 {
-    animation-delay: .6s; }
-  .content .t-5 {
-    animation-delay: .8s; }
-  .content .t-6 {
     animation-delay: 1s; }
+  .content .t-3 {
+    animation-delay: 1.3s; }
+  .content .t-4 {
+    animation-delay: 1.8s; }
+  .content .t-5 {
+    animation-delay: 2.3s; }
+  .content .t-6 {
+    animation-delay: 3.4s; }
+  .content .t-7 {
+    animation-delay: 3.7s; }
+  .content .t-8 {
+    animation-delay: 3.9s; }
+  .content .t-9 {
+    animation-delay: 6.5s; }
+
+.author {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40%;
+  display: block;
+  font-weight: lighter; }
 
 @-webkit-keyframes fade-in {
   100% {
