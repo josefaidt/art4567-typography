@@ -445,7 +445,7 @@ span.text {
   transition: color 500ms 200ms; }
 
 span.text:hover {
-  color: #7fff7f; }
+  color: #ff9; }
 
 @-webkit-keyframes fade-in {
   100% {

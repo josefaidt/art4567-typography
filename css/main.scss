@@ -347,7 +347,7 @@ span.text {
 	@include transition(color 500ms 200ms);
 }
 span.text:hover {
-    color: $clr7;
+    color: $clrPaleYellow;
   }
 
 @include keyframes(fade-in) {
